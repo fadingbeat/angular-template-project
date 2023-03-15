@@ -1,3 +1,4 @@
+import { ErrorDialogService } from './shared/errors/error-dialog.service';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -21,6 +22,7 @@ import { CommonModule } from '@angular/common';
         MaterialModule,
     ],
     providers: [
+        ErrorDialogService,
         {
             provide: ErrorHandler,
             useClass: GlobalErrorHandler,
